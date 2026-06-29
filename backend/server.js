@@ -10,7 +10,8 @@ App.use(express.json());
 App.use(cookieParser());
 
 dotenv.config();
-const port = 3000;
+
+const port = process.env.PORT;
 
 mongoose
   .connect(process.env.mongo_uri)
